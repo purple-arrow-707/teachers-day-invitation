@@ -1,0 +1,495 @@
+```css
+body {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.12), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(80, 120, 255, 0.12), transparent 30%),
+        #0b1d3a;
+    font-family: Georgia, serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================
+   MAIN INVITATION
+   ========================= */
+
+.invitation {
+    position: relative;
+    background-image:
+        linear-gradient(rgba(7, 26, 51, 0.55), rgba(7, 26, 51, 0.55)),
+        url("assets/background.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 90%;
+    max-width: 600px;
+    min-height: 850px;
+    margin: 30px auto;
+    padding: 40px;
+    box-sizing: border-box;
+
+    border: 2px solid #d4af37;
+    text-align: center;
+    border-radius: 12px;
+
+    /* Subtle golden glow */
+    box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.25),
+        0 0 45px rgba(212, 175, 55, 0.08);
+
+    animation: invitationGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes invitationGlow {
+    from {
+        box-shadow:
+            0 0 15px rgba(212, 175, 55, 0.2),
+            0 0 35px rgba(212, 175, 55, 0.05);
+    }
+
+    to {
+        box-shadow:
+            0 0 25px rgba(212, 175, 55, 0.4),
+            0 0 60px rgba(212, 175, 55, 0.12);
+    }
+}
+
+/* =========================
+   TEXT
+   ========================= */
+
+.invited {
+    color: #d4af37;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #f4e7c1;
+    font-size: 42px;
+    margin-top: 30px;
+    line-height: 1.2;
+
+    text-shadow:
+        0 0 10px rgba(244, 231, 193, 0.25),
+        0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+.subtitle {
+    color: #d4af37;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* =========================
+   DIVIDERS
+   ========================= */
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: #d4af37;
+    margin: 30px auto;
+
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+.section-line {
+    width: 90%;
+    border: none;
+    border-top: 1px solid #8f7020;
+    margin: 35px auto;
+}
+
+/* =========================
+   ORNAMENT
+   ========================= */
+
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 45px auto;
+    width: 80%;
+}
+
+.ornament span {
+    height: 1px;
+    background-color: #8f7020;
+    flex: 1;
+
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+.diamond {
+    color: #d4af37;
+    font-size: 22px;
+
+    text-shadow:
+        0 0 5px #d4af37,
+        0 0 15px rgba(212, 175, 55, 0.7);
+
+    animation: diamondPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes diamondPulse {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   THEME
+   ========================= */
+
+.theme-heading {
+    color: #d4af37;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-top: 50px;
+}
+
+.theme {
+    color: #f4e7c1;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.4;
+    max-width: 550px;
+    margin: 25px auto 40px;
+
+    text-shadow: 0 0 12px rgba(244, 231, 193, 0.2);
+}
+
+/* =========================
+   QUOTE
+   ========================= */
+
+.quote {
+    color: #f4e7c1;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 35px auto;
+
+    text-shadow: 0 0 8px rgba(244, 231, 193, 0.15);
+}
+
+/* =========================
+   EVENT DETAILS
+   ========================= */
+
+.details-heading {
+    color: #d4af37;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.detail-box {
+    border: 1px solid #8f7020;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin: 20px auto;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: rgba(10, 28, 55, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* ✨ Hover effect on event boxes */
+
+.detail-box:hover {
+    transform: translateY(-5px) scale(1.02);
+
+    border-color: #d4af37;
+
+    background: rgba(20, 45, 80, 0.55);
+
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, 0.35),
+        0 0 30px rgba(212, 175, 55, 0.12);
+}
+
+.detail-icon {
+    color: #f4e7c1;
+    font-size: 35px;
+    width: 50px;
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.detail-box:hover .detail-icon {
+    transform: scale(1.15) rotate(-5deg);
+
+    text-shadow:
+        0 0 8px #d4af37,
+        0 0 18px rgba(212, 175, 55, 0.6);
+}
+
+.detail-text {
+    text-align: left;
+}
+
+.detail-label {
+    color: #d4af37;
+    font-size: 17px;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.detail-value {
+    color: #f4e7c1;
+    font-size: 23px;
+    margin: 0;
+}
+
+/* =========================
+   CLOSING
+   ========================= */
+
+.closing {
+    color: #d4af37;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 10px;
+}
+
+.council {
+    color: #f4e7c1;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 0;
+
+    text-shadow: 0 0 10px rgba(244, 231, 193, 0.2);
+}
+
+.school {
+    color: #d4af37;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* =========================
+   MUSIC BUTTON
+   ========================= */
+
+.music-button {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+
+    padding: 0;
+
+    border: 2px solid #c9a45a;
+    border-radius: 50%;
+
+    background: rgba(201, 164, 90, 0.08);
+
+    color: #f3e5c7;
+    font-size: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* ✨ Music button hover */
+
+.music-button:hover {
+    transform: scale(1.12);
+
+    background: rgba(212, 175, 55, 0.18);
+
+    border-color: #f4d76b;
+
+    box-shadow:
+        0 0 10px rgba(212, 175, 55, 0.6),
+        0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.music-button:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   MOBILE VERSION
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .invitation {
+        width: 94%;
+        min-height: 100vh;
+        padding: 45px 20px;
+
+        border-left: 1px solid #9c7a32;
+        border-right: 1px solid #9c7a32;
+    }
+
+    .music-button {
+        top: 18px;
+        right: 18px;
+
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+
+        font-size: 25px;
+        border-width: 1px;
+    }
+
+    .invited {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-top: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-top: 35px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+
+    .divider {
+        width: 75px;
+        margin: 28px auto;
+    }
+
+    .ornament {
+        width: 90%;
+        gap: 15px;
+        margin: 35px auto;
+    }
+
+    .diamond {
+        font-size: 17px;
+    }
+
+    .theme-heading {
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-top: 40px;
+    }
+
+    .theme {
+        font-size: 21px;
+        line-height: 1.4;
+        margin: 20px auto 30px;
+    }
+
+    .section-line {
+        width: 100%;
+        margin: 28px auto;
+    }
+
+    .quote {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 28px auto;
+    }
+
+    .details-heading {
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin: 40px 0 25px;
+    }
+
+    .detail-box {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 18px 15px;
+        margin: 14px auto;
+
+        border-radius: 15px;
+        gap: 15px;
+    }
+
+    .detail-icon {
+        font-size: 26px;
+        width: 35px;
+        flex-shrink: 0;
+    }
+
+    .detail-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+
+    .detail-value {
+        font-size: 17px;
+    }
+
+    .closing {
+        font-size: 14px;
+        margin-top: 40px;
+    }
+
+    .council {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .school {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+}
+```
