@@ -493,3 +493,107 @@ h1 {
     }
 }
 ```
+/* =========================
+   CURTAIN REVEAL
+   ========================= */
+
+.curtain {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #0b1d3a;
+}
+
+/* Curtain panels */
+
+.curtain-left,
+.curtain-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.25),
+            rgba(120,20,40,0.15),
+            rgba(0,0,0,0.3)
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #4b1020 0px,
+            #68152b 20px,
+            #3d0b18 40px
+        );
+
+    transition: transform 1.8s cubic-bezier(.77,0,.18,1);
+}
+
+.curtain-left {
+    left: 0;
+}
+
+.curtain-right {
+    right: 0;
+}
+
+/* Reveal button */
+
+#revealButton {
+    position: relative;
+    z-index: 10000;
+
+    padding: 18px 35px;
+
+    border: 2px solid #d4af37;
+    border-radius: 50px;
+
+    background: rgba(11,29,58,0.9);
+    color: #f4e7c1;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,0.4),
+        0 0 35px rgba(212,175,55,0.2);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#revealButton:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.7),
+        0 0 50px rgba(212,175,55,0.35);
+}
+
+#revealButton:active {
+    transform: scale(0.96);
+}
+
+/* When revealed */
+
+.curtain.revealed .curtain-left {
+    transform: translateX(-100%);
+}
+
+.curtain.revealed .curtain-right {
+    transform: translateX(100%);
+}
+
+.curtain.revealed #revealButton {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
