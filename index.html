@@ -3,6 +3,12 @@
      <title> TEACHERS' DAY INVITATION</title>
     <link rel="stylesheet" href="style.css">
 </head> <body>
+    <div class="curtain" id="curtain">
+    <div class="curtain-left"></div>
+    <div class="curtain-right"></div>
+
+    <button id="revealButton">REVEAL INVITATION</button>
+</div>
     <div class="invitation">
         <button class="music-button" id="musicButton">
     ♪
@@ -71,5 +77,13 @@
             button.innerHTML = "♪";
         }
     });
+
+        const curtain = document.getElementById("curtain");
+const revealButton = document.getElementById("revealButton");
+
+revealButton.addEventListener("click", () => {
+    curtain.classList.add("revealed");
+});
 </script>
+    
 </body> </html>
