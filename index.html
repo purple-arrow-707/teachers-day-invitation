@@ -1,0 +1,75 @@
+<!DOCTYPE html> <head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> TEACHERS' DAY INVITATION</title>
+    <link rel="stylesheet" href="style.css">
+</head> <body>
+    <div class="invitation">
+        <button class="music-button" id="musicButton">
+    ♪
+</button>
+
+<audio id="backgroundMusic" loop>
+    <source src="assets/senorita.mp3" type="audio/mpeg">
+</audio>
+    <p class="invited"> Cordially Invited by the Student Council</p>
+    
+    <h1> Honouring Our Educators</h1>
+    <p class="subtitle"> Teachers' Day Celebration </p>
+   <div class="ornament">
+    <span></span>
+    <div class="diamond">◆</div>
+    <span></span>
+</div>
+    <p class="theme-heading"> THIS YEAR'S THEME </p>
+    <p class="theme"> “Voyage of Life, Guided by You, Teachers" </p>
+    <hr class="section-line">
+    <p class="quote">
+    "A good teacher is like a candle — it consumes
+    itself to light the way for others." </p>
+    <hr class="section-line">
+    <h2 class="details-heading"> EVENTS DETAILs</h2>
+<div class="detail-box">
+    <div class="detail-icon">♧</div>
+
+    <div class="detail-text">
+        <p class="detail-label">DATE</p>
+        <p class="detail-value">5th September</p>
+    </div>
+</div>
+<div class="detail-box">
+    <div class="detail-icon">◷</div>
+
+    <div class="detail-text">
+        <p class="detail-label">TIME</p>
+        <p class="detail-value">9:00 AM</p>
+    </div>
+</div>
+
+<div class="detail-box">
+    <div class="detail-icon">⌖</div>
+
+    <div class="detail-text">
+        <p class="detail-label">VENUE</p>
+        <p class="detail-value">School Auditorium</p>
+    </div>
+</div>
+<p class="closing">With gratitude and respect,</p>
+
+<p class="council">THE STUDENT COUNCIL</p>
+<p class="school">Notre Dame Academy, Jamalpur</p>
+    </div>
+    <script>
+    const music = document.getElementById("backgroundMusic");
+    const button = document.getElementById("musicButton");
+
+    button.addEventListener("click", () => {
+        if (music.paused) {
+            music.play();
+            button.innerHTML = "♫";
+        } else {
+            music.pause();
+            button.innerHTML = "♪";
+        }
+    });
+</script>
+</body> </html>
